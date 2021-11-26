@@ -1,7 +1,6 @@
+//Employee Card Selections
 const createEmployeeCard = function (employee) {
-    return `< div class="row" >
-
-            <section class="col-3 text-center border border-1">
+    return `<section class="col-3 text-center border border-1">
                 <h2>
                     ${employee.name}
                 </h2>
@@ -11,21 +10,15 @@ const createEmployeeCard = function (employee) {
                     <br>
                         Email: ${employee.email}
                         <br>
-                            </section>
-
-                        </div>
-
-    `
+                            </section>`
 };
 
 const createManagerCard = function (manager) {
-    return `< div class="row" >
-
-            <section class="col-3 text-center border border-1">
+    return `<section class="col-3 text-center border border-1">
                 <h2>
                     ${manager.name}
                 </h2>
-                <b> Employee </b>
+                <b> Manager </b>
                 <br>
                     ID: ${manager.ID}
                     <br>
@@ -33,21 +26,15 @@ const createManagerCard = function (manager) {
                         <br>
                         Office Number: ${manager.office}
                         <br>
-                            </section>
-
-                        </div>
-
-    `
+                            </section>`
 };
 
 const createInternCard = function (intern) {
-    return `< div class="row" >
-
-            <section class="col-3 text-center border border-1">
+    return `<section class="col-3 text-center border border-1">
                 <h2>
                     ${intern.name}
                 </h2>
-                <b> Employee </b>
+                <b> Intern </b>
                 <br>
                     ID: ${intern.ID}
                     <br>
@@ -55,21 +42,15 @@ const createInternCard = function (intern) {
                         <br>
                         School: ${intern.school}
                         <br>
-                            </section>
-
-                        </div>
-
-    `
+                            </section> `
 };
 
 const createEngineerCard = function (engineer) {
-    return `< div class="row" >
-
-            <section class="col-3 text-center border border-1">
+    return `<section class="col-3 text-center border border-1">
                 <h2>
                     ${engineer.name}
                 </h2>
-                <b> Employee </b>
+                <b> Engineer </b>
                 <br>
                     ID: ${engineer.ID}
                     <br>
@@ -77,13 +58,10 @@ const createEngineerCard = function (engineer) {
                         <br>
                         Github: ${engineer.github}
                         <br>
-                            </section>
-
-                        </div>
-
-    `
+                            </section> `
 };
 
+//Employee Card Loop Selector
 mainHTML = (data) => {
     output = [];
 
@@ -104,20 +82,16 @@ mainHTML = (data) => {
             const employeeDiv = createEmployeeCard(employee)
             output.push(employeeDiv);
         }
-
-        console.log(data)
     }
     const allCards = output.join('')
     const finalTeam = finalTeamPage(allCards);
-    console.log(output);
-    console.log(data);
     return finalTeam
     
 }
 
-
+//Final Team Page
 const finalTeamPage = function (allCards) {
-    return `< !DOCTYPE html >
+    return `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -143,8 +117,9 @@ const finalTeamPage = function (allCards) {
 
 
     <!-- Team Info -->
+<div class="row">
    ${allCards}
-
+</div>
     <!-- Separate Popper and Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

@@ -46,4 +46,4 @@ When prompted for an employee, only baseline data is requested (email, ID, name)
 ## Badges
 
 * <a href="https://github.com/badges/shields"><img src="https://img.shields.io/badge/JSS-80%25-green" alt="JavaScript 80% Badge"></a>
-* <a href="https://github.com/badges/shields"><img src="https://img.shields.io/badge/JSS-20%25-green" alt="HTML 20% Badge"></a>
+* <a href="https://github.com/badges/shields"><img src="https://img.shields.io/badge/HTML-20%25-green" alt="HTML 20% Badge"></a>

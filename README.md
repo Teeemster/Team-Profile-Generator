@@ -12,6 +12,8 @@
 
 When prompted for an employee, only baseline data is requested (email, ID, name). When asked for intern, manager, or engineer, this same information is requested, with the addition of school, office number, and Github respectively for each additional role.
 
+* Video: https://watch.screencastify.com/v/kOWq9fhCwlaLQl0WGvKT
+
 ## Table of Contents
 * [Installation](#installation)
 

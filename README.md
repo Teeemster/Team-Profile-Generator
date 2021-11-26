@@ -23,10 +23,10 @@
 * The application can be invoked using node index.js. From here, the user will be prompted with a series of questions to fill out each user. After selecting the answer "No" to entering another team member, the HTML file is formed.
 * This repository can be opened as an HTML within Github at the website: https://github.com/Teeemster/Team-Profile-Generator
 
-![Sample of Profile](ProfileSample.PNG)
+![Sample of Profile](assets/ProfileSample.PNG)
 
 ## Testing
-* To run tests, use: npm test.
+* To run tests, use: npm run test.
 
 ## Contributors
 * Jay Beach

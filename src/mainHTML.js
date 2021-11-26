@@ -87,10 +87,10 @@ const createEngineerCard = function (engineer) {
 mainHTML = (data) => {
     output = [];
 
-    for (let i = 0; i < output.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         const employee = data[i];
         const role = employee.getRole();
-        
+
         if (role === 'Manager') {
             const managerDiv = createManagerCard(employee)
             output.push(managerDiv);
@@ -104,17 +104,20 @@ mainHTML = (data) => {
             const employeeDiv = createEmployeeCard(employee)
             output.push(employeeDiv);
         }
+
+        console.log(data)
     }
     const allCards = output.join('')
     const finalTeam = finalTeamPage(allCards);
+    console.log(output);
+    console.log(data);
     return finalTeam
+    
 }
 
 
 const finalTeamPage = function (allCards) {
-
-    return
-    `< !DOCTYPE html >
+    return `< !DOCTYPE html >
 <html lang="en">
 
 <head>

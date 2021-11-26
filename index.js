@@ -48,20 +48,7 @@ const output = [];
                 if (answers.askAgain) {
                     ask();
                 } else {
-                    console.log(output);
-
-                    const writeFile = data => {
-                        fs.writeFile('./dist/index.html', data, err => {
-                            if (err) {
-                                console.log(err);
-                                return;
-                            } else {
-                                console.log("The profile has been formed.")
-                            }
-                        })
-                    };
-
-                    return mainHTML(output)
+                    getHTML(output);
                 }
             })
     }
@@ -102,21 +89,7 @@ const output = [];
                 if (answers.askAgain) {
                     ask();
                 } else {
-                    console.log(output);
-
-                    const writeFile = data => {
-                        fs.writeFile('./dist/index.html', data, err => {
-                            if (err) {
-                                console.log(err);
-                                return;
-                            } else {
-                                console.log("The profile has been formed.")
-                            }
-                        })
-                    };
-
-                    return mainHTML(output)
-
+                    getHTML(output);
                 }
             })
     };
@@ -157,20 +130,7 @@ const output = [];
                 if (answers.askAgain) {
                     ask();
                 } else {
-                    console.log(output);
-                    
-                    const writeFile = data => {
-                        fs.writeFile('./dist/index.html', data, err => {
-                            if (err) {
-                                console.log(err);
-                                return;
-                            } else {
-                                console.log("The profile has been formed.")
-                            }
-                        })
-                    };
-
-                    return mainHTML(output)
+                    getHTML(output);
                 }
             })
     };
@@ -211,28 +171,7 @@ const output = [];
                 if (answers.askAgain) {
                     ask();
                 } else {
-                    console.log(output);
-
-                    const writeFile = data => {
-                        fs.writeFile('./dist/index.html', data, err => {
-                            if (err) {
-                                console.log(err);
-                                return;
-                            } else {
-                                console.log("The profile has been formed.")
-                            }
-                        })
-                    };
-
-                    function arrayPush() {
-                        return mainHTML(output)
-
-                        function finalHTML() {
-                            return writeFile(output)
-                        }
-                        finalHTML();
-                    }
-                    arrayPush();
+                    getHTML(output);
                 }
             })
     };
@@ -253,7 +192,18 @@ const output = [];
 
     ask()
 
+const getHTML = output => {
+    const htmlData = mainHTML(output)
 
+    fs.writeFile('./dist/index.html', htmlData, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("The profile has been formed.")
+        }
+    })
+};
 
     
 

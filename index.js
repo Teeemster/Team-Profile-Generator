@@ -1,11 +1,11 @@
-'use strict';
+const mainHTML = require('./src/mainHTML');
+const fs = require('fs');
 const inquirer = require('inquirer');
 const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const output = [];
-
 
     const startQuestion = [
         {
@@ -15,6 +15,7 @@ const output = [];
             choices: ['Employee', 'Engineer', 'Intern', 'Manager']
         },
     ];
+
 
     function employeeFun() {
         inquirer
@@ -48,6 +49,19 @@ const output = [];
                     ask();
                 } else {
                     console.log(output);
+
+                    const writeFile = data => {
+                        fs.writeFile('./dist/index.html', data, err => {
+                            if (err) {
+                                console.log(err);
+                                return;
+                            } else {
+                                console.log("The profile has been formed.")
+                            }
+                        })
+                    };
+
+                    return mainHTML(output)
                 }
             })
     }
@@ -89,6 +103,20 @@ const output = [];
                     ask();
                 } else {
                     console.log(output);
+
+                    const writeFile = data => {
+                        fs.writeFile('./dist/index.html', data, err => {
+                            if (err) {
+                                console.log(err);
+                                return;
+                            } else {
+                                console.log("The profile has been formed.")
+                            }
+                        })
+                    };
+
+                    return mainHTML(output)
+
                 }
             })
     };
@@ -130,6 +158,19 @@ const output = [];
                     ask();
                 } else {
                     console.log(output);
+                    
+                    const writeFile = data => {
+                        fs.writeFile('./dist/index.html', data, err => {
+                            if (err) {
+                                console.log(err);
+                                return;
+                            } else {
+                                console.log("The profile has been formed.")
+                            }
+                        })
+                    };
+
+                    return mainHTML(output)
                 }
             })
     };
@@ -171,6 +212,27 @@ const output = [];
                     ask();
                 } else {
                     console.log(output);
+
+                    const writeFile = data => {
+                        fs.writeFile('./dist/index.html', data, err => {
+                            if (err) {
+                                console.log(err);
+                                return;
+                            } else {
+                                console.log("The profile has been formed.")
+                            }
+                        })
+                    };
+
+                    function arrayPush() {
+                        return mainHTML(output)
+
+                        function finalHTML() {
+                            return writeFile(output)
+                        }
+                        finalHTML();
+                    }
+                    arrayPush();
                 }
             })
     };
@@ -189,6 +251,18 @@ const output = [];
         });
     }
 
-ask()
+    ask()
+
+
+
+    
+
+    
+
+     
+
+   
+
+
 
 
